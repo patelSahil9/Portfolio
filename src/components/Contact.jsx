@@ -2,8 +2,10 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
-import { EarthCanvas } from "./canvas";
+// import { EarthCanvas } from "./canvas";
+import { BallCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
+
 
 const Contact = () => {
   const formRef = useRef();
@@ -58,21 +60,20 @@ const Contact = () => {
   return (
     <>
       <div className="relative z-0 mb-20">
-        <div className="w-40 h-40 mx-auto relative">
-          <img 
-            src="me.jpg"
+        {/* <div className="w-40 h-40 mx-auto relative"> */}
+          {/* <img 
+            src="meImg"
             alt="Profile"
             className="w-full h-full rounded-full object-cover border-4 border-[#915EFF] shadow-xl"
-          />
-          <div className="absolute inset-0 rounded-full bg-gradient-to-b from-transparent to-black/50"></div>
-        </div>
-        <h3 className="text-white text-center mt-6 text-3xl font-bold">Sahil Patel</h3>
-        <p className="text-secondary text-center mt-2 text-lg"> Full Stack Developer</p>
-        <div className="flex justify-center gap-4 mt-4">
+          /> */}
+          {/* <div className="absolute inset-0 rounded-full bg-gradient-to-b from-transparent to-black/50"></div> */}
+        {/* </div> */}
+        {/* <h3 className="text-white text-center mt-6 text-3xl font-bold">Sahil Patel</h3> */}
+        {/* <div className="flex justify-center gap-4 mt-4">
           <div className="px-4 py-2 bg-tertiary rounded-full text-white text-sm">React</div>
           <div className="px-4 py-2 bg-tertiary rounded-full text-white text-sm">Node.js</div>
           <div className="px-4 py-2 bg-tertiary rounded-full text-white text-sm">Three.js</div>
-        </div>
+        </div> */}
       </div>
 
       <div className="xl:mt-12 xl:flex-row flex-col-reverse flex gap-10 overflow-hidden">
@@ -135,7 +136,8 @@ const Contact = () => {
           variants={slideIn("right", "tween", 0.2, 1)}
           className="xl:flex-1 xl:h-auto md:h-[550px] h-[350px]"
         >
-          <EarthCanvas />
+          <BallCanvas/>
+        
         </motion.div>
       </div>
     </>

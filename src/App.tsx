@@ -1,11 +1,13 @@
 import { BrowserRouter } from "react-router-dom";
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works } from "./components";
 import { StarsCanvas } from "./components/canvas";
+// import BannerBackground from "./components/canvas/BannerBackground";
 
 function App() {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
+        {/* <BannerBackground /> */}
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />

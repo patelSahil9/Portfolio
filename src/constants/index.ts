@@ -1,17 +1,17 @@
 import {
   css,
   docker,
-  figma,
+  // figma,
   git,
   html,
   javascript,
-  mongodb,
+  // mongodb,
   nodejs,
   reactjs,
-  redux,
+  // redux,
   tailwind,
   typescript,
-  threejs,
+  // threejs,
   project1,
   project2,
   project3,
@@ -73,10 +73,7 @@ const technologies = [
     name: "React JS",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   },
-  {
-    name: "Redux Toolkit",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
-  },
+  
   {
     name: "Tailwind CSS",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
@@ -85,22 +82,12 @@ const technologies = [
     name: "Node JS",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
-  {
-    name: "MongoDB",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
-  },
-  {
-    name: "Three JS",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg",
-  },
+  
   {
     name: "Git",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
-  {
-    name: "Figma",
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-  },
+  
   {
     name: "Docker",
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
