@@ -34,7 +34,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
             className="w-[60%] h-[60%] object-contain"
           />
         </div>
-      }
+      } 
     >
       <div>
         <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>

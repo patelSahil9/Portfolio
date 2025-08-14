@@ -42,11 +42,11 @@ const services = [
     icon: "ReactIcon",
   },
   {
-    title: "Backend Developer",
+    title: "Idea Alchemist",
     icon: "ServerIcon",
   },
   {
-    title: "Content Creator",
+    title: "Visual Narrator",
     icon: "PenToolIcon",
   },
 ];
@@ -97,10 +97,10 @@ const technologies = [
 const experiences = [
   {
     title: "React.js Developer",
-    company_name: "Company One",
+    company_name: "Pyonix Technologies",
     icon: reactjs,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "June 2025 - July 2025",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -108,45 +108,45 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
-  {
-    title: "Full Stack Developer",
-    company_name: "Company Two",
-    icon: nodejs,
-    iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
-    points: [
-      "Building robust backend systems with Node.js, Express, and MongoDB.",
-      "Creating RESTful APIs for frontend consumption.",
-      "Implementing authentication and authorization systems.",
-      "Optimizing database queries for performance.",
-    ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Company Three",
-    icon: javascript,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Leading frontend development for multiple client projects.",
-      "Mentoring junior developers and conducting code reviews.",
-      "Implementing CI/CD pipelines for automated testing and deployment.",
-      "Collaborating with UX/UI designers to implement pixel-perfect designs.",
-    ],
-  },
-  {
-    title: "Full Stack Developer",
-    company_name: "Company Four",
-    icon: typescript,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Architecting and developing scalable web applications using modern technologies.",
-      "Leading development teams and managing project timelines.",
-      "Implementing advanced features like real-time communication and data visualization.",
-      "Ensuring code quality through comprehensive testing and code reviews.",
-    ],
-  },
+  // {
+  //   title: "Full Stack Developer",
+  //   company_name: "Company Two",
+  //   icon: nodejs,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jan 2021 - Feb 2022",
+  //   points: [
+  //     "Building robust backend systems with Node.js, Express, and MongoDB.",
+  //     "Creating RESTful APIs for frontend consumption.",
+  //     "Implementing authentication and authorization systems.",
+  //     "Optimizing database queries for performance.",
+  //   ],
+  // },
+  // {
+  //   title: "Web Developer",
+  //   company_name: "Company Three",
+  //   icon: javascript,
+  //   iconBg: "#383E56",
+  //   date: "Jan 2022 - Jan 2023",
+  //   points: [
+  //     "Leading frontend development for multiple client projects.",
+  //     "Mentoring junior developers and conducting code reviews.",
+  //     "Implementing CI/CD pipelines for automated testing and deployment.",
+  //     "Collaborating with UX/UI designers to implement pixel-perfect designs.",
+  //   ],
+  // },
+  // {
+  //   title: "Full Stack Developer",
+  //   company_name: "Company Four",
+  //   icon: typescript,
+  //   iconBg: "#E6DEDD",
+  //   date: "Jan 2023 - Present",
+  //   points: [
+  //     "Architecting and developing scalable web applications using modern technologies.",
+  //     "Leading development teams and managing project timelines.",
+  //     "Implementing advanced features like real-time communication and data visualization.",
+  //     "Ensuring code quality through comprehensive testing and code reviews.",
+  //   ],
+  // },
 ];
 
 const testimonials = [
@@ -200,9 +200,9 @@ const projects = [
     live_demo_link: "https://example.com/",
   },
   {
-    name: "AI Content Generator",
+    name: "AI Image Generator",
     description:
-      "Web application that leverages AI to generate various types of content including blog posts, social media captions, and marketing copy based on user inputs.",
+      "Web application that leverages AI to generate various types of images including any imaginations, social media and marketing copy based on user inputs.",
     tags: [
       {
         name: "react",
@@ -222,20 +222,20 @@ const projects = [
     live_demo_link: "https://example.com/",
   },
   {
-    name: "Interactive Dashboard",
+    name: "Blockchain Based KYC System",
     description:
-      "A comprehensive dashboard with data visualization tools, real-time analytics, and customizable widgets for business intelligence and monitoring.",
+      "A decentralized Know Your Customer (KYC) system that uses blockchain technology to provide secure and transparent identity verification, allowing individuals to have full control over their personal information and providing institutions with a secure and reliable way to verify identities.",
     tags: [
       {
         name: "nextjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Tailwindcss",
         color: "pink-text-gradient",
       },
     ],
