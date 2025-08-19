@@ -1,17 +1,13 @@
 import {
   css,
   docker,
-  // figma,
   git,
   html,
   javascript,
-  // mongodb,
   nodejs,
   reactjs,
-  // redux,
   tailwind,
   typescript,
-  // threejs,
   project1,
   project2,
   project3,
@@ -98,7 +94,7 @@ const experiences = [
   {
     title: "React.js Developer",
     company_name: "Pyonix Technologies",
-    icon: reactjs,
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
     iconBg: "#383E56",
     date: "June 2025 - July 2025",
     points: [
@@ -187,7 +183,7 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "nodejs",
         color: "green-text-gradient",
       },
       {
@@ -197,7 +193,7 @@ const projects = [
     ],
     image: project1,
     source_code_link: "https://github.com/",
-    live_demo_link: "https://example.com/",
+    // live_demo_link: "https://example.com/",
   },
   {
     name: "AI Image Generator",
@@ -219,7 +215,7 @@ const projects = [
     ],
     image: project2,
     source_code_link: "https://github.com/",
-    live_demo_link: "https://example.com/",
+    // live_demo_link: "https://example.com/",
   },
   {
     name: "Blockchain Based KYC System",
@@ -231,7 +227,7 @@ const projects = [
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "nodejs",
         color: "green-text-gradient",
       },
       {
@@ -241,7 +237,7 @@ const projects = [
     ],
     image: project3,
     source_code_link: "https://github.com/",
-    live_demo_link: "https://example.com/",
+    // live_demo_link: "https://example.com/",
   },
 ];
 

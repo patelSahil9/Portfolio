@@ -25,20 +25,37 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
 
-    // Note: In a real implementation, you would use your own EmailJS service ID, template ID, and public key
-    emailjs
-      .send(
-        "service_id", // Replace with your service ID
-        "template_id", // Replace with your template ID
-        {
-          from_name: form.name,
-          to_name: "Your Name",
-          from_email: form.email,
-          to_email: "your.email@example.com",
-          message: form.message,
-        },
-        "public_key" // Replace with your public key
-      )
+    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID as string;
+    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID as string;
+    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY as string;
+
+    const isPlaceholder = [serviceId, templateId, publicKey].some(
+      (v) => !v || /REPLACE_WITH/i.test(v)
+    );
+
+    if (!serviceId || !templateId || !publicKey || isPlaceholder) {
+      console.error("EmailJS env vars missing: VITE_EMAILJS_SERVICE_ID, VITE_EMAILJS_TEMPLATE_ID, VITE_EMAILJS_PUBLIC_KEY");
+      alert(
+        "Email service is not configured. Please add your EmailJS keys to .env and restart the dev server."
+      );
+      setLoading(false);
+      return;
+    }
+
+    const payload = {
+      from_name: form.name,
+      to_name: "Sahil Patel",
+      from_email: form.email,
+      reply_to: form.email,
+      message: form.message,
+      // Provide alternative/common EmailJS template variable names to avoid 400s
+      user_name: form.name,
+      user_email: form.email,
+      user_message: form.message,
+      to_email: "psahil1209@gmail.com",
+    } as Record<string, string>;
+
+    emailjs.send(serviceId, templateId, payload, publicKey)
       .then(
         () => {
           setLoading(false);
@@ -52,8 +69,9 @@ const Contact = () => {
         },
         (error) => {
           setLoading(false);
-          console.error(error);
-          alert("Something went wrong. Please try again.");
+          console.error("EmailJS send error:", error);
+          const errorMsg = (error && (error.text || error.message)) || "Unknown error";
+          alert(`Something went wrong sending your message: ${errorMsg}`);
         }
       );
   };

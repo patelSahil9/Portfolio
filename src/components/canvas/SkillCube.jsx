@@ -40,9 +40,9 @@ const RotatingCube = () => {
     { text: "React", color: "#61DAFB", position: [0, 0, 1], rotation: [0, 0, 0] },
     { text: "Node.js", color: "#68A063", position: [0, 0, -1], rotation: [0, Math.PI, 0] },
     { text: "JavaScript", color: "#3178C6", position: [1, 0, 0], rotation: [0, Math.PI / 2, 0] },
-    { text: "Three.js", color: "#000000", position: [-1, 0, 0], rotation: [0, -Math.PI / 2, 0] },
+    { text: "Docker", color: "#2496ED", position: [-1, 0, 0], rotation: [0, -Math.PI / 2, 0] },
     { text: "Tailwind", color: "#38B2AC", position: [0, 1, 0], rotation: [Math.PI / 2, 0, 0] },
-    { text: "MongoDB", color: "#4DB33D", position: [0, -1, 0], rotation: [-Math.PI / 2, 0, 0] },
+    { text: "Git", color: "#F05032", position: [0, -1, 0], rotation: [-Math.PI / 2, 0, 0] },
   ];
 
   return (
