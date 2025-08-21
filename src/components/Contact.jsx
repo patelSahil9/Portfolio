@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
-import emailjs from "@emailjs/browser";
+// emailjs removed: using backend API with Resend
 import { styles } from "../styles";
 // import { EarthCanvas } from "./canvas";
 import { BallCanvas } from "./canvas";
@@ -21,40 +21,27 @@ const Contact = () => {
     setForm({ ...form, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-
-    emailjs
-      .send(
-        "service_id", // Replace with your service ID
-        "template_id", // Replace with your template ID
-        {
-          from_name: form.name,
-          to_name: "Your Name",
-          from_email: form.email,
-          to_email: "your.email@example.com",
-          message: form.message,
-        },
-        "public_key" // Replace with your public key
-      )
-      .then(
-        () => {
-          setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
-
-          setForm({
-            name: "",
-            email: "",
-            message: "",
-          });
-        },
-        (error) => {
-          setLoading(false);
-          console.error(error);
-          alert("Something went wrong. Please try again.");
-        }
-      );
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name: form.name, email: form.email, message: form.message }),
+      });
+      if (!response.ok) {
+        const data = await response.json().catch(() => ({}));
+        throw new Error(data.error || `Request failed with ${response.status}`);
+      }
+      setLoading(false);
+      alert("Thank you. I will get back to you as soon as possible.");
+      setForm({ name: "", email: "", message: "" });
+    } catch (err) {
+      setLoading(false);
+      console.error(err);
+      alert("Something went wrong. Please try again.");
+    }
   };
 
   return (
